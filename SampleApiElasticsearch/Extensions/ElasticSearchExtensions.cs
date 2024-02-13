@@ -22,6 +22,8 @@ namespace SampleApiElasticsearch.Extensions
 
             AddDefaultMappings(settings);
 
+            //settings.BasicAuthentication("username", "password");
+
             var client = new ElasticClient(settings);
             services.AddSingleton<IElasticClient>(client);
 
